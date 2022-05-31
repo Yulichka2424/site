@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Numbers</title>
+	<style type="text/css">
+		body{
+			background-color: yellow;
+			color: blue;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	let numb=prompt("Введіть число","");
+	let sum = 0;
+while(isNaN(numb)){
+	numb=prompt("Введіть число","");}
+	document.write("У вашому числі "+numb+" "+ numb.length+" цифр"+"<br>");
+	for(let i = 0; i < numb.length; i++) {
+		document.write(numb[i]+"<br>");
+		sum += +numb[i];
+	}
+
+	document.writeln("Сумма всіх цифр: " + sum + "<br>");
+	let num=prompt("Введіть число:","");
+
+	document.write("Ваше число: " + num+ "<br>");
+	document.write(odd_OR_even(num));
+
+
+	function odd_OR_even(num) {
+		let counter_odd = 0;
+		let counter_even = 0;
+		for(let i = 0; i < num.length; i++) {
+			if(num[i] % 2 == 0) {
+				counter_even++;
+			}
+			else {
+				counter_odd++;
+			}
+		}
+		if(counter_even > counter_odd) {
+			return 1;
+		}
+		else if(counter_odd > counter_even) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
+	}
+
+
+</script>
+</body>
+</html>

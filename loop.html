@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kaxjcsjc</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			font-size: 25px;
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+let numUser; 
+let numX=Math.round(Math.random()*100);
+ do { numUser = prompt("вгадайте число від 0 до 100", 0); 
+if (numUser==null) { 
+alert("Ми чекали від Вас число");
+} else if (+numUser<numX) { 
+alert("Ваше число менше"); 
+} else if (+numUser>numX){
+alert("Ваше число більше"); 
+} else if (+numUser==numX){ 
+alert("Ура!!! Вгадали!!! "+numX); } 
+else{
+	alert("Вводьте число")
+}
+} while (numUser != numX && numUser != null);
+
+
+</script>
+</body>
+</html>
